@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonajesComponent } from './personajes/personajes.component';
+import { PersonajesService } from './services/personajes.service';
 import { FilmsComponent } from './films/films.component';
 import { FilmsService } from './services/films.service';
 import { PlanetsComponent } from './planets/planets.component';
@@ -23,7 +24,7 @@ import { PlanetsService } from './services/planets.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [FilmsService, PlanetsService],
+  providers: [PersonajesService, FilmsService, PlanetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

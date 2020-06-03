@@ -1,1 +1,18 @@
-<p>personajes works!</p>
+<h2>Personajes</h2>
+<div>
+  <table border="1" style="width: 100%;">
+    <thead>
+      <tr>
+        <th>Color Ojos</th>
+        <th>Personaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.birth_year }}</td>
+        <td>{{ person.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
