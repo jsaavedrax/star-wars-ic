@@ -11,20 +11,23 @@ import { FilmsComponent } from './films/films.component';
 import { FilmsService } from './services/films.service';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetsService } from './services/planets.service';
+import { VehiculosComponent } from './vehiculos/vehiculos.component';
+import { VehiculosService } from './services/vehiculos.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonajesComponent,
     FilmsComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    VehiculosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [PersonajesService, FilmsService, PlanetsService],
+  providers: [PersonajesService, FilmsService, PlanetsService, VehiculosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
