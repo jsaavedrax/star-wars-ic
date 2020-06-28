@@ -3,15 +3,17 @@
   <table border="1" style="width: 100%;">
     <thead>
       <tr>
+        <th>Nombre</th>
+        <th>Altura</th>
         <th>Color Ojos</th>
-        <th>Personaje</th>
         <th>Género</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let person of people">
-        <td>{{ person.birth_year }}</td>
         <td>{{ person.name }}</td>
+        <td>{{ person.height }}</td>
+        <td>{{ person.eye_color }}</td>
         <td>{{ person.gender }}</td>
       </tr>
     </tbody>
