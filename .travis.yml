@@ -16,6 +16,8 @@ after_script:
 before_deploy:
 deploy:
   provider: npm
+  email: jsaavedrax@gmail.com
+  api_key: 7835e0fe-a15a-49be-8548-de578090fd1e
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
