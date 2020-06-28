@@ -15,10 +15,10 @@ after_failure:
 after_script:
 before_deploy:
 deploy:
-  provider: pages
+  provider: npm
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: star-wars-ic/dist/
+  local_dir: dist/
   on:
     branch: master
 
