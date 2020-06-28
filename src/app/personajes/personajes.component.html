@@ -5,12 +5,14 @@
       <tr>
         <th>Color Ojos</th>
         <th>Personaje</th>
+        <th>Género</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let person of people">
         <td>{{ person.birth_year }}</td>
         <td>{{ person.name }}</td>
+        <td>{{ person.gender }}</td>
       </tr>
     </tbody>
   </table>

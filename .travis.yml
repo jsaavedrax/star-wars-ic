@@ -17,6 +17,7 @@ before_deploy:
 deploy:
   provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN
   local_dir: star-wars-ic/dist/
   on:
     branch: master
