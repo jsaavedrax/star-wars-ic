@@ -20,6 +20,7 @@ describe('FilmsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+     //expect(component).toBeTruthy();
+    expect(component.getListFilms).toBeGreaterThan(0);
   });
 });
