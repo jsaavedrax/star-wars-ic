@@ -8,8 +8,8 @@ cache:
     - ./node_modules
 before_install:
   - docker ps -a
-  - docker run -d -p 8085:80 starwars:latest
-  - docker ps -a
+  # - docker run -d -p 8085:80 starwars:latest
+  # - docker ps -a
 install:
   - npm install
 before_script:
