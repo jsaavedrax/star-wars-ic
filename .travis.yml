@@ -16,7 +16,7 @@ before_install:
 before_script:
 script:
   # - npm run-script test
-  # - npm run-script build
+  - npm run-script build
 after_success:
   - docker images
 after_failure:
