@@ -5,12 +5,12 @@ cache:
 directories:
   - ./node_modules
 before_install:
+install:
+  #- npm install
   - docker build -t starwars .
   - docker run -d -p 8085:80 starwars:latest
   - docker ps -a
-  - docker images ls
-install:
-  - npm install
+  - docker images
 before_script:
 script:
   - npm run-script build
