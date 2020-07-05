@@ -1,31 +1,23 @@
 lebguage: node_js
 mode_js:
-  -  "12.16.3"
-services:
-  - docker
+  - "12.16.3"
 cache:
-  directories:
-    - ./node_modules
+directories:
+  - ./node_modules
 before_install:
- # - docker build -t starwars .
-  - docker run -d -p 8085:80 starwars:latest
-  - docker ps -a
-  - docker images
-  install:
+install:
   - npm install
 before_script:
 script:
-  # - npm run-script test
   - npm run-script build
 after_success:
 after_failure:
 after_script:
 before_deploy:
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/starwars
-  on:
-    branch: master
-
+provider: pages
+skip_cleanup: true
+github_token: $GITHUB_TOKEN
+local_dir: dist/starwars
+on:
+branch: master
