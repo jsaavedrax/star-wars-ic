@@ -9,16 +9,16 @@ cache:
 before_install:
     - docker ps -a
     - docker images
-    - docker build -t starwars .
-    - docker run -d -p 8085:80 starwars:latest
-    - docker ps -a
-install:
-  - npm install
+  install:
+  # - npm install
+  - docker build -t starwars .
+  - docker run -d -p 8085:80 starwars:latest
 before_script:
 script:
   # - npm run-script test
-  - npm run-script build
+  # - npm run-script build
 after_success:
+  - docker images
 after_failure:
 after_script:
 before_deploy:
