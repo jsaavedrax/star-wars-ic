@@ -20,6 +20,6 @@ describe('VehiculosComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).length > 0;
   });
 });

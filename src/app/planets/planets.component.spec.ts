@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import { PlanetsComponent } from './planets.component';
 
 describe('PlanetsComponent', () => {
@@ -20,6 +20,6 @@ describe('PlanetsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).length > 0;
   });
 });

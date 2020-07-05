@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
 import { PersonajesComponent } from './personajes.component';
 
@@ -20,6 +21,6 @@ describe('PersonajesComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).length > 0;
   });
 });

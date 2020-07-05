@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FilmsComponent } from './films.component';
+import { HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
 describe('FilmsComponent', () => {
   let component: FilmsComponent;
@@ -20,7 +20,6 @@ describe('FilmsComponent', () => {
   });
 
   it('should create', () => {
-     //expect(component).toBeTruthy();
-    expect(component.getListFilms).toBeGreaterThan(0);
+     expect(component).length > 0;
   });
 });
