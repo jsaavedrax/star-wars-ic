@@ -6,8 +6,8 @@ directories:
   - ./node_modules
 before_install:
 install:
-  #- npm install
-  - docker build -t starwars .
+  - npm install
+  #- docker build -t starwars .
   - docker run -d -p 8085:80 starwars:latest
 before_script:
 script:
