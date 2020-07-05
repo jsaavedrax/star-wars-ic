@@ -10,7 +10,7 @@ export class PersonajesService {
   constructor(private httpCliente: HttpClient) { }
 
   getPeople(){
-    return this.httpCliente.get("https://swapi.dev/api/people/");
+    return this.httpCliente.get("http://swapi.dev/api/people/");
   }
 
 }

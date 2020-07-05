@@ -9,7 +9,7 @@ export class FilmsService {
   constructor(private httpCliente: HttpClient) { }
 
   getFilms(){
-    return this.httpCliente.get("https://swapi.dev/api/films/");
+    return this.httpCliente.get("http://swapi.dev/api/films/");
   }
 }
 
