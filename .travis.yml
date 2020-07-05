@@ -9,19 +9,19 @@ install:
   #- npm install
   - docker build -t starwars .
   - docker run -d -p 8085:80 starwars:latest
-  - docker ps -a
-  - docker images
 before_script:
 script:
-  - npm run-script build
+  # - npm run-script build
+  - docker ps -a
+  - docker images
 after_success:
 after_failure:
 after_script:
 before_deploy:
-deploy:
-provider: pages
-skip_cleanup: true
-github_token: $GITHUB_TOKEN
-local_dir: dist/starwars
-on:
-branch: master
+#deploy:
+#provider: pages
+#skip_cleanup: true
+#github_token: $GITHUB_TOKEN
+#local_dir: dist/starwars
+#on:
+#branch: master
