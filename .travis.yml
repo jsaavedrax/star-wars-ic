@@ -7,12 +7,12 @@ directories:
 before_install:
 install:
   - npm install
-  - npm run-script test
   #- docker build -t starwars .
   #- docker run -d -p 127.0.0.1:8085:80 starwars:latest
 before_script:
 script:
   - npm run-script build
+  - npm run-script test
   #- docker ps -a
   #- docker images
 after_success:
