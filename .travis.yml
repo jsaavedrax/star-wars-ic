@@ -13,13 +13,13 @@ install:
   - npm install
   - docker build -t starwars .
   - docker pull nginx:alpine
-  - docker run -d -p 172.22.6.21:8085:80 starwars:latest
+  - docker run -d -p 8085:80 starwars:latest
 before_script:
 script:
   - npm run-script build
   #- npm run-script test --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-  #- docker ps -a
-  #- docker images
+  - docker ps -a
+  - docker images
 after_success:
 after_failure:
 after_script:
