@@ -11,8 +11,8 @@ cache:
 before_install:
 install:
   - npm install
-  - docker pull nginx:alpine
   - docker build -t starwars .
+  - docker pull nginx:alpine
   - docker run -d -p 172.22.6.21:8085:80 starwars:latest
 before_script:
 script:
