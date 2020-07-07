@@ -12,7 +12,7 @@ install:
 before_script:
 script:
   - npm run-script build
-  - npm run-script test
+  - npm run-script test --watch=false --browsers=ChromeHeadlessNoSandbox
   #- docker ps -a
   #- docker images
 after_success:
@@ -28,5 +28,3 @@ on:
 branch: master
 addons:
   chrome: stable
-    switches:
-      - no-sandbox
