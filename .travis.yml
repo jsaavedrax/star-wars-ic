@@ -1,3 +1,6 @@
+dist: trusty
+sudo: false
+
 lebguage: node_js
 mode_js:
   - "12.16.3"
