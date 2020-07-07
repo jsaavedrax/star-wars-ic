@@ -6,24 +6,24 @@ directories:
   - ./node_modules
 before_install:
 install:
-  #- npm install
+  - npm install
   - npm run-script test
-  - docker build -t starwars .
-  - docker run -d -p 127.0.0.1:8085:80 starwars:latest
+  #- docker build -t starwars .
+  #- docker run -d -p 127.0.0.1:8085:80 starwars:latest
 before_script:
 script:
-  # - npm run-script build
-  - docker ps -a
-  - docker images
+  - npm run-script build
+  #- docker ps -a
+  #- docker images
 after_success:
 after_failure:
 after_script:
 before_deploy:
-#Esto me funciona correctamente en Github Pages
-#deploy:
-#provider: pages
-#skip_cleanup: true
-#github_token: $GITHUB_TOKEN
-#local_dir: dist/starwars
-#on:
-#branch: master
+Esto me funciona correctamente en Github Pages
+deploy:
+provider: pages
+skip_cleanup: true
+github_token: $GITHUB_TOKEN
+local_dir: dist/starwars
+on:
+branch: master

@@ -14,13 +14,20 @@ describe('PersonajesService', () => {
       imports:[ HttpClientTestingModule ],
       providers: [ PersonajesService ]
     });
-    service = TestBed.inject(PersonajesService);
-    httpMock = TestBed.inject(HttpTestingController);
-    httpClient = TestBed.inject(HttpClient);
+
+    service = TestBed.get(PersonajesService);
+    httpMock = TestBed.get(HttpTestingController);
+    httpClient = TestBed.get(HttpClient);
   });
 
-  it('should be created', () => {
-    // expect(service).toBeTruthy();
+  it('should retieve posts from the API via GET', () => {
+    const dummyPosts = [
+      {userId: '1', id:1, body: 'Hello word', tittle: 'API Star Wars' },
+      {userId: '2', id:2, body: 'Hello word', tittle: 'API Star Wars 2' },
+    ];
+  })
+
+  it('should be created service.getPeople length > 0', () => {
     expect(service.getPeople).length > 0;
   });
 

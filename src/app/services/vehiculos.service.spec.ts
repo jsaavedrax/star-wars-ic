@@ -14,15 +14,16 @@ describe('VehiculosService', () => {
       imports:[ HttpClientTestingModule ],
       providers: [ VehiculosService ]
     });
-    service = TestBed.inject(VehiculosService);
-    httpMock = TestBed.inject(HttpTestingController);
-    httpClient = TestBed.inject(HttpClient);
+
+    service = TestBed.get(VehiculosService);
+    httpMock = TestBed.get(HttpTestingController);
+    httpClient = TestBed.get(HttpClient);
   });
 
-
+  /*
   it('should be created', () => {
     // expect(service).toBeTruthy();
     expect(service.getVehiculos).length > 0;
-  });
+  }); */
 
 });

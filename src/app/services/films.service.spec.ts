@@ -14,14 +14,16 @@ describe('FilmsService', () => {
       imports:[ HttpClientTestingModule ],
       providers: [ FilmsService ]
     });
-    service = TestBed.inject(FilmsService);
-    httpMock = TestBed.inject(HttpTestingController);
-    httpClient = TestBed.inject(HttpClient);
+
+    service = TestBed.get(FilmsService);
+    httpMock = TestBed.get(HttpTestingController);
+    httpClient = TestBed.get(HttpClient);
+
   });
 
+  /*
   it('should be created', () => {
-    // expect(service).toBeTruthy();
     expect(service.getFilms).length > 0;
-  });
+  }); */
 
 });

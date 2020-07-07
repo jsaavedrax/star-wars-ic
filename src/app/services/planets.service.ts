@@ -9,7 +9,7 @@ export class PlanetsService {
   constructor(private httpCliente: HttpClient) { }
 
   getPlanets(){
-    return this.httpCliente.get("http://swapi.dev/api/planets/");
+    return this.httpCliente.get("https://swapi.dev/api/planets/");
   }
 
 
