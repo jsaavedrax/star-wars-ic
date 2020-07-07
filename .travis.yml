@@ -1,25 +1,20 @@
 dist: trusty
 sudo: false
-
 lebguage: node_js
 mode_js:
   - "12.16.3"
-
 addons:
   chrome: stable
-
 cache:
   directories:
   - ./node_modules
 before_install:
-
-  install:
+install:
   - npm install
   #- docker build -t starwars .
   #- docker run -d -p 127.0.0.1:8085:80 starwars:latest
 before_script:
-
-  script:
+script:
   - npm run-script build
   - npm run-script test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
   #- docker ps -a
