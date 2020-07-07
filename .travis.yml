@@ -19,7 +19,6 @@ after_success:
 after_failure:
 after_script:
 before_deploy:
-Esto me funciona correctamente en Github Pages
 deploy:
 provider: pages
 skip_cleanup: true
