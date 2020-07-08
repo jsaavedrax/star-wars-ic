@@ -25,9 +25,9 @@ after_failure:
 after_script:
 before_deploy:
 deploy:
-provider: pages
-skip_cleanup: true
-github_token: $GITHUB_TOKEN
-local_dir: dist/starwars
-on:
-branch: master
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/starwars
+  on:
+    branch: master
