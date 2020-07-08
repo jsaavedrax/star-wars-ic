@@ -8,3 +8,9 @@ RUN npm run build -- --prod
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 FROM nginx:alpine
 COPY --from=node /app/dist/starwars /usr/share/nginx/html
+
+WORKDIR /app/dist/browser
+EXPOSE 8085
+ENV PORT 8085
+RUN npm install http-server -g
+CMD [ "http-server" ]
